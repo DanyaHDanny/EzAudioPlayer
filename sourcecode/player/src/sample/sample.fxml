@@ -3,7 +3,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Slider?>
-<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.RadialGradient?>
@@ -11,32 +11,44 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="154.0" prefWidth="600.0" style="-fx-background-color: goldenrod;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PlayerController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="600.0" style="-fx-background-color: goldenrod;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PlayerController">
    <children>
       <Button fx:id="FileButton" layoutX="50.0" layoutY="44.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: violet; -fx-background-size: 42; -fx-background-image: url('/icons/file.png');">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
+         </cursor>
+         <effect>
+            <Bloom />
+         </effect></Button>
       <Button fx:id="PauseButton" layoutX="127.0" layoutY="27.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="82.0" style="-fx-background-color: violet; -fx-background-radius: 200; -fx-background-size: 82; -fx-background-image: url('/icons/pause.png');">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
+         </cursor>
+         <effect>
+            <Bloom />
+         </effect></Button>
       <Button fx:id="PlayButton" layoutX="240.0" layoutY="14.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="95.0" style="-fx-background-color: violet; -fx-background-radius: 200; -fx-background-image: url('/icons/play.png'); -fx-background-size: 100;">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
+         </cursor>
+         <effect>
+            <Bloom />
+         </effect></Button>
       <Button fx:id="StopButton" layoutX="363.0" layoutY="21.0" mnemonicParsing="false" prefHeight="81.0" prefWidth="82.0" style="-fx-background-color: violet; -fx-background-radius: 200; -fx-background-size: 85; -fx-background-image: url('/icons/stop.png');">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
-      <Slider fx:id="TimeSlider" layoutX="36.0" layoutY="117.0" prefHeight="18.0" prefWidth="502.0">
+         </cursor>
          <effect>
-            <DropShadow />
-         </effect>
+            <Bloom />
+         </effect></Button>
+      <Slider fx:id="TimeSlider" layoutX="36.0" layoutY="117.0" prefHeight="18.0" prefWidth="502.0">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
-         </cursor></Slider>
-      <Text fx:id="FileNameText" layoutX="36.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="527.96875">
+         </cursor>
+         <effect>
+            <Bloom />
+         </effect></Slider>
+      <Text fx:id="FileNameText" layoutX="24.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="527.96875">
          <font>
             <Font size="24.0" />
          </font>
@@ -47,7 +59,10 @@
                   <Stop color="WHITE" offset="1.0" />
                </stops>
             </RadialGradient>
-         </fill></Text>
+         </fill>
+         <effect>
+            <Bloom />
+         </effect></Text>
       <Text fx:id="TimerText" layoutX="542.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--|--" wrappingWidth="54.099609375">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -59,18 +74,24 @@
                   <Stop color="WHITE" offset="1.0" />
                </stops>
             </LinearGradient>
-         </fill></Text>
+         </fill>
+         <effect>
+            <Bloom />
+         </effect></Text>
       <Button fx:id="VolumeButton" layoutX="463.0" layoutY="44.0" maxWidth="42.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="42.0" style="-fx-background-color: violet; -fx-background-radius: 40; -fx-min-width: 40; -fx-max-width: 40; -fx-min-height: 40; -fx-max-height: 40; -fx-background-size: 40; -fx-background-image: url('/icons/volume.png');">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
-      <Slider fx:id="VolumeSlider" cache="true" layoutX="506.0" layoutY="55.0" max="1.0" prefHeight="18.0" prefWidth="95.0" value="0.01">
+         </cursor>
          <effect>
-            <DropShadow />
-         </effect>
+            <Bloom />
+         </effect></Button>
+      <Slider fx:id="VolumeSlider" cache="true" layoutX="506.0" layoutY="55.0" max="1.0" prefHeight="18.0" prefWidth="95.0" value="0.01">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
+         <effect>
+            <Bloom />
+         </effect>
       </Slider>
    </children>
 </AnchorPane>
